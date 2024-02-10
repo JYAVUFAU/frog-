@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day</title>
+  <style>
+    body {
+      background-color: #fce4ec; /* Light Pink background */
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .note-container {
+      background-color: #ff80ab; /* Lighter Pink container background */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Valentine's Day!</h1>
+
+  <p>Would you like to receive a special note?</p>
+
+  <button onclick="showNote()">Yes</button>
+  <button onclick="exitSite()">No</button>
+
+  <script>
+    function showNote()
+     {
+      document.body.innerHTML = `
+        <div class="note-container">
+          <h2>Dear Valentine,</h2>
+          <p>Roses are red, violets are blue, wishing you love that's forever true!</p>
+          <p>With love,<br>Your Secret Admirer</p>
+        </div>`;
+    }
+
+    function exitSite() {
+      if (confirm("Are you sure you dont want me ?")) {
+        window.close();
+      }
+    }
+  </script>
+</body>
+</html>
+
